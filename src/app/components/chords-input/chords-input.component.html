@@ -1,0 +1,21 @@
+<select id="chordChoice" (change)="selectChord($event)">
+    <option value="C"><li>C</li>  </option>
+    <option value="D">D</option>
+    <option value="E">E</option>
+    <option value="F">F</option>
+    <option value="G">G</option>
+    <option value="A">A</option>
+    <option value="B">B</option>
+  </select>
+  <!-- <select (change)="selectMajorOrMinor($event)">
+    <option value="Major">Major</option>
+    <option value="Minor">Minor</option>
+  </select> -->
+
+  <div class="majOrMin">
+    <button (click)="isMajorClicked()"  [ngStyle]="blackBg" class="major" >Major</button>
+    <button (click)="isMinorClicked()" [ngStyle]="whiteBg" class="min">Minor</button>
+  </div>
+<li class="list" *ngFor="let element of chordCombination; let i = index">
+    {{chordCombination[i]}}
+</li>
